@@ -1,0 +1,22 @@
+@mixin scrollbar() {
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(58, 75, 90, 1);
+    border-radius: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba(51, 52, 54, 1);
+  }
+}
+
