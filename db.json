@@ -1,0 +1,18 @@
+{
+  "posts": [
+    {
+      "nameProduct": "ewt",
+      "descriptionProduct": "wetwe",
+      "hrefImage": "wet",
+      "prise": "wetew",
+      "id": 1
+    },
+    {
+      "nameProduct": "sdfsd",
+      "descriptionProduct": "dsfsdf",
+      "hrefImage": "sdf",
+      "prise": "sdfsd",
+      "id": 2
+    }
+  ]
+}
