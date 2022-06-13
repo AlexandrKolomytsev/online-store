@@ -61,6 +61,8 @@ export default {
 
 <style lang="scss" scoped>
 .title{
+  font-family: 'SourceSansPro', sans-serif;
+  font-style: normal;
   font-weight: 600;
   font-size: 28px;
   line-height: 35px;
