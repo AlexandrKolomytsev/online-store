@@ -25,7 +25,7 @@
           <input v-model="prise" class="input form__input" name="email" type="email" placeholder="Введите цену">
         </label>
 
-        <button class="button-form" type="submit" @click.prevent="sendForm">
+        <button type="submit" class="button-form" @click.prevent="sendForm">
           Добавить товар
         </button>
       </form>
@@ -34,6 +34,7 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 export default {
   name: 'AddProduct',
   data () {
@@ -46,6 +47,7 @@ export default {
     }
   },
   methods: {
+    ...mapActions(['fetchPosts']),
     sendForm () {
       this.dataForm = {
         nameProduct: this.nameProduct,
@@ -53,7 +55,10 @@ export default {
         hrefImage: this.hrefImage,
         prise: this.prise
       }
-      this.$axios.post('http://localhost:3001/posts', this.dataForm)
+      this.$axios.post('http://localhost:3001/cards', this.dataForm)
+        .then(() => {
+          this.fetchPosts()
+        })
     }
   }
 }

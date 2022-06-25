@@ -1,5 +1,5 @@
 {
-  "posts": [
+  "cards": [
     {
       "nameProduct": "Объектив YongNuo AF 35mm",
       "descriptionProduct": "Объектив YongNuo AF 35mm F2.0 имеет байонет, позволяющий крепить его на цифровые зеркальные камеры разных серий от Canon. Объектив выполнен с использованием самых передовых материалов и технологий, он привлекает своей универсальностью: его можно рекомендовать в качестве основного и наиболее практичного для любительских камер.",
@@ -27,6 +27,20 @@
       "hrefImage": "https://c.dns-shop.ru/thumb/st1/fit/500/500/3067cc2a151571c3e7b020d58f30b4d9/ce664b1b5e08b23369fcc50b8ccd9b2dc8a66bd1e0765a03e699768060777321.jpg.webp",
       "prise": "10 12000 ₽",
       "id": 4
+    },
+    {
+      "nameProduct": "Стич плюшевый",
+      "descriptionProduct": "Самая крутая мягкая игрушка в мире",
+      "hrefImage": "https://avatarko.ru/img/kartinka/33/multfilm_lyagushka_32117.jpg",
+      "prise": "122 000 р",
+      "id": 5
+    },
+    {
+      "nameProduct": "Hug",
+      "descriptionProduct": "Bear",
+      "hrefImage": "https://vjoy.cc/wp-content/uploads/2019/07/1-66.jpg",
+      "prise": "Бесценно",
+      "id": 6
     }
   ]
 }
