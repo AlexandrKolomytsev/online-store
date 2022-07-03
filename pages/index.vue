@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <add-product />
-    <div class="product-card">
+    <div class="product-cards-wrapper">
       <product-cards />
     </div>
   </div>
@@ -19,8 +19,15 @@ export default {
 .main{
   display: flex;
   gap: 16px;
+  justify-content: center;
+  margin: 0 auto;
+  @include mediaMax($small-tablet-max-width){
+    flex-direction: column;
+    width: fit-content;
+  }
 }
-.product-card{
+.product-cards-wrapper{
   margin-top: 83px;
+  position: relative;
 }
 </style>

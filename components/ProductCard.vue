@@ -15,7 +15,7 @@
           {{ item.descriptionProduct }}
         </p>
         <p class="product-card__cost">
-          {{ item.prise }}
+          {{ item.prise }} ₽
         </p>
       </div>
     </div>

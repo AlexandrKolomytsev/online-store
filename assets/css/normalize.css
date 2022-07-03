@@ -36,7 +36,7 @@ main {
 a {
   background-color: transparent;
 }
-p {
+p, ul {
   padding: 0;
   margin: 0;
 }
