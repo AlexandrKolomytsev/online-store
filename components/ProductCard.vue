@@ -36,9 +36,6 @@ export default {
     return {
       closeActive: false
     }
-  },
-  methods: {
-
   }
 }
 </script>
@@ -46,6 +43,7 @@ export default {
 <style lang="scss" scoped>
 .product-card{
   width: 332px;
+  transition: 0.3s;
   height: 423px;
   background: #FFFEFB;
   box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.04), 0px 6px 10px rgba(0, 0, 0, 0.02);
@@ -72,7 +70,7 @@ export default {
     font-weight: 600;
     font-size: 20px;
     line-height: 25px;
-    color: #3F3F3F;
+    color: $color-black;
     margin-bottom: 16px;
     white-space: nowrap; /* Запрещаем перенос строк */
     overflow: hidden; /* Обрезаем все, что не помещается в область */
@@ -82,7 +80,7 @@ export default {
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
-    color: #3F3F3F;
+    color: $color-black;
     margin-bottom: 32px;
     height: 80px;
     overflow-y: scroll;
@@ -92,7 +90,7 @@ export default {
     font-weight: 600;
     font-size: 24px;
     line-height: 30px;
-    color: #3F3F3F;
+    color: $color-black;
     margin-bottom: 24px;
   }
 }

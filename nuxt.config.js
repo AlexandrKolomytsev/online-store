@@ -20,8 +20,8 @@ export default {
   css: [
     '~assets/css/_mixin.scss',
     '~assets/css/normalize.css',
-    '~assets/css/_fonts.css',
     '~assets/css/_common.scss',
+    '~assets/css/_fonts.css',
 
   ],
 

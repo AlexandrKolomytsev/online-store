@@ -152,7 +152,7 @@ export default {
 $default-text-hover-color: white;
 $default-hover-color: #7BAE73;
 $default-text-color: #B4B4B4;
-$option-padding: 4px 10px;
+$option-padding: 0 10px;
 
 .dropdown {
   display: flex;
@@ -195,7 +195,7 @@ $option-padding: 4px 10px;
         border: solid $default-text-color;
         background: transparent;
         border-width: 0 2px 2px 0;
-        padding: 2px;
+        padding: 1px;
         width: 1px;
         height: 1px;
         margin: -3px 5px 0 0;

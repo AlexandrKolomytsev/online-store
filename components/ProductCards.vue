@@ -1,12 +1,14 @@
 <template>
-  <div class="product-cards">
+  <div>
     <dropdown-component
       :config="config"
       @setSelectedOption="setNewSelectedOption($event)"
     />
-    <div v-for="item in allPost" :key="item.id">
-      <product-card :item="item" @delete-Card="deleteCard" />
-    </div>
+    <transition-group name="list" tag="div" class="product-cards">
+      <div v-for="item in allPost" :key="item.id">
+        <product-card :item="item" @delete-Card="deleteCard" />
+      </div>
+    </transition-group>
   </div>
 </template>
 
@@ -47,7 +49,7 @@ export default {
         textColor: '#B4B4B4',
         borderRadius: '4px',
         border: '',
-        width: 180
+        width: 140
       },
       masCard: '',
       post: []
@@ -61,25 +63,29 @@ export default {
     ...mapActions(['fetchPosts']),
     ...mapMutations(['updatePost']),
     setNewSelectedOption (selectedOption) {
+      const methodsSort = {
+        sortOne: 1,
+        sortTwo: 2,
+        sortThree: 3,
+        sortFour: 4
+      }
       this.config.placeholder = selectedOption.value
-      console.log('мне че то передали')
-      console.log(selectedOption.id, this.allPost)
-      if (selectedOption.id === 1) {
+      if (selectedOption.id === methodsSort.sortOne) {
         this.fetchPosts()
       }
-      if (selectedOption.id === 2) {
+      if (selectedOption.id === methodsSort.sortTwo) {
         const parsePrice = x => parseFloat(x.replace(/\s/, '')) || 0
         const masCard = [...this.allPost]
           .sort((a, b) => parsePrice(a.prise) - parsePrice(b.prise))
         this.updatePost(masCard)
       }
-      if (selectedOption.id === 3) {
+      if (selectedOption.id === methodsSort.sortThree) {
         const parsePrice = x => parseFloat(x.replace(/\s/, '')) || 0
         const masCard = [...this.allPost]
           .sort((a, b) => parsePrice(a.prise) - parsePrice(b.prise))
         this.updatePost(masCard.reverse())
       }
-      if (selectedOption.id === 4) {
+      if (selectedOption.id === methodsSort.sortFour) {
         function SortArray (x, y) {
           return x.nameProduct.localeCompare(y.nameProduct)
         }
@@ -97,6 +103,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+//animation block
+.list-item {
+  display: flex;
+  margin-right: 10px;
+}
+.list-enter-active, .list-leave-active {
+  transition: all 1s;
+}
+.list-enter, .list-leave-to /* .list-leave-active до версии 2.1.8 */ {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
 .product-cards {
   gap: 16px;
   flex-wrap: wrap;
