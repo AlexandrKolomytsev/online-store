@@ -21,8 +21,7 @@ export default {
     '~assets/css/_mixin.scss',
     '~assets/css/normalize.css',
     '~assets/css/_common.scss',
-    '~assets/css/_fonts.css',
-
+    '~assets/css/_fonts.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
